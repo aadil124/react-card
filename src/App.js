@@ -1,24 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import CardData from "./components/CardData.jsx";
 
 function App() {
+  const valueInCards = [
+    {
+      tier: "Free",
+      price: 0,
+      user: "Single User",
+      storage: "5GB Storage",
+      project: "Unlimited Public Projects",
+      access: "Community Access",
+      privateProjects: "Unlimited Private Projects",
+      phoneSupport: "Dedicated Phone Support",
+      subdomain: "Free Subdomain",
+      statusReport: "Monthly Status Reports",
+    },
+    {
+      tier: "Plus",
+      price: 9,
+      user: "5 User",
+      storage: "50GB Storage",
+      project: "Unlimited Public Projects",
+      access: "Community Access",
+      privateProjects: "Unlimited Private Projects",
+      phoneSupport: "Dedicated Phone Support",
+      subdomain: "Free Subdomain",
+      statusReport: "Monthly Status Reports",
+    },
+    {
+      tier: "Pro",
+      price: 49,
+      user: "Unlimited User",
+      storage: "150GB Storage",
+      project: "Unlimited Public Projects",
+      access: "Community Access",
+      privateProjects: "Unlimited Private Projects",
+      phoneSupport: "Dedicated Phone Support",
+      subdomain: "Free Subdomain",
+      statusReport: "Monthly Status Reports",
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <section class="pricing py-5">
+        <div class="container">
+          <div class="row">
+            {valueInCards.map((item) => {
+              return <CardData item={item} />;
+            })}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 
