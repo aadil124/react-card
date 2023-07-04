@@ -1,73 +1,72 @@
 import React from "react";
-// import "../../node_modules/@fortawesome/fontawesome-svg-core/styles.css";
-
 
 const CardData = ({ item }) => {
-  console.log(item);
+  // console.log(item);
   return (
-    <div class="col-lg-4">
-      <div class="card mb-5 mb-lg-0">
-        <div class="card-body">
-          <h5 class="card-title text-muted text-uppercase text-center">
-            {item.tier}
+    <div className="col-lg-4">
+      <div className="card mb-5 mb-lg-0">
+        <div className="card-body">
+          <h5 className="card-title text-muted text-uppercase text-center">
+            {item.plan}
           </h5>
-          <h6 class="card-price text-center">
-            ${item.price}
-            <span class="period">/month</span>
+          <h6 className="card-price text-center">
+            ${item.cost}
+            <span className="period">/month</span>
           </h6>
           <hr />
-          <ul class="fa-ul">
-            <li>
-              <span class="fa-li">
-                <i class="fas fa-check"></i>
+          <ul className="fa-ul">
+            <li className={item.usersCount.fontWeight}>
+              <span className="fa-li">
+                <i className="fas fa-check"></i>
               </span>
-              {item.user}
+              {item.usersCount.user}
             </li>
             <li>
-              <span class="fa-li">
-                <i class="fas fa-check"></i>
+              <span className="fa-li">
+                <i className="fas fa-check"></i>
               </span>
               {item.storage}
             </li>
             <li>
-              <span class="fa-li">
-                <i class="fas fa-check"></i>
+              <span className="fa-li">
+                <i className="fas fa-check"></i>
               </span>
-              {item.project}
+              {item.projects}
             </li>
             <li>
-              <span class="fa-li">
-                <i class="fas fa-check"></i>
+              <span className="fa-li">
+                <i className="fas fa-check"></i>
               </span>
               {item.access}
             </li>
-            <li class="text-muted">
-              <span class="fa-li">
-                <i class="fas fa-times"></i>
+            <li className={item.projectsNumbers.text}>
+              <span className="fa-li">
+                <i className={item.projectsNumbers.icon}></i>
               </span>
-              {item.privateProjects}
+              {item.projectsNumbers.privateProjects}
             </li>
-            <li class="text-muted">
-              <span class="fa-li">
-                <i class="fas fa-times"></i>
+            <li className={item.phone.text}>
+              <span className="fa-li">
+                <i className={item.phone.icon}></i>
               </span>
-              {item.phoneSupport}
+              {item.phone.phoneSupport}
             </li>
-            <li class="text-muted">
-              <span class="fa-li">
-                <i class="fas fa-times"></i>
+            <li className={item.domain.text}>
+              <span className="fa-li">
+                <i className={item.domain.icon}></i>
               </span>
-              {item.subdomain}
+              <b>{item.domain.singleBoldText}</b>
+              {item.domain.subDomain}
             </li>
-            <li class="text-muted">
-              <span class="fa-li">
-                <i class="fas fa-times"></i>
+            <li className={item.monthlyReports.text}>
+              <span className="fa-li">
+                <i className={item.monthlyReports.icon}></i>
               </span>
-              {item.statusReport}
+              {item.monthlyReports.report}
             </li>
           </ul>
-          <div class="d-grid">
-            <a href="#" class="btn btn-primary text-uppercase">
+          <div className="d-grid">
+            <a href="/" className="btn btn-primary text-uppercase">
               Button
             </a>
           </div>
